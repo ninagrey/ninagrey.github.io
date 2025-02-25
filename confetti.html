@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+	
+	<style type="text/css">
+		.confetti{
+			width: 20px;
+			height: 20px;
+			background-color: ;
+			position: absolute;
+			margin: 2px;
+			display: inline-block;
+
+		}
+		#message{
+			width: 100px;
+			height: 100px;
+			font-family: "Delius Swash Caps";
+			font-weight: 1000;
+			: red;
+
+
+		}
+
+
+	</style>
+</head>
+<body>
+
+<script type="text/javascript">
+	function makeConfetti(){
+		let sprinkle = document.createElement("div")
+		document.body.appendChild(sprinkle)
+		sprinkle.classList.add("confetti")
+		sprinkle.style.top="0px"
+		sprinkle.style.left="0px"
+
+	function fall(){
+		if(parseInt(sprinkle.style.top)>1000)
+		{
+			sprinkle.style.top ="0px"
+		}
+		else{
+		sprinkle.style.top=parseInt(sprinkle.style.top) +
+			Math.random()*100+"px"
+		sprinkle.style.left = Math.random()*2000+"px"
+	}
+
+}
+
+	setInterval(fall, 200)
+	sprinkle.style.height = Math.random()*45+"px"
+	sprinkle.style.width = Math.random()*30+"px"
+
+	let r = 255
+	let g = Math.random()*200
+	let b = Math.random()*200
+
+	sprinkle.style.backgroundColor= "rgb("+r+","+g+","+b+")";
+
+	}
+
+	for(let i=0; i<1000; i=i+1){
+		makeConfetti(i)
+	}
+</script>
+<center> <div id="message"> HAPPY VALENTINES DAY</div> </center>
+<div class="confetti"></div>
+
+</body>
+</html>

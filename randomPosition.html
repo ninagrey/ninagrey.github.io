@@ -1,0 +1,36 @@
+<html>
+<head>
+	<style type="text/css">
+		
+		#turkey{
+			width:200px;
+			height:200px;
+			background-image: url(https://media2.giphy.com/media/l3mZhr02lGhaYBelq/giphy.gif?cid=6c09b952bt95q3jjr206jkwz2g1cqnq2qgh7rx8nqxp6usyc&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+			background-size:cover;
+			background-repeat: no-repeat;
+			border-radius: 50%;
+			position:absolute;
+			transition:4s;
+			left:100px;
+			top:100px;
+		}
+	</style>
+
+</head>
+<body>
+	<div id="turkey"></div>
+<script type="text/javascript">
+		console.log(Math.random())
+
+		function move (){
+			console.log(Math.random())
+			turkey.style.left = Math.random()*500+"px";
+			turkey.style.top = Math.random()*500+ "px";
+		}
+
+		setInterval(move,400)
+
+	</script>
+
+</body>
+</html>

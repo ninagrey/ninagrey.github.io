@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title></title>
+
+	<style type="text/css">
+		.cakes{
+			font-size: 40px;
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background-image: url(https://media4.giphy.com/media/u7x4Qc39eZ4bbus3TR/giphy.gif?cid=6c09b952tarn1tvok6y8nlbwyw9lv8bldemqpogjghdo0rb6&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+
+	<center> Turkey Clock</center>
+
+	<script type="text/javascript">
+		
+		let counter =0;
+
+		function makeCupcake(){
+			let cupcake= document.createElement("div")
+			document.body.appendChild(cupcake)
+			cupcake.classList.add("cakes")
+			counter=counter+1
+			cupcake.innerText = counter
+
+		}
+
+		serInterval(makecupcake, 1000)
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+<html>
+<head>
+	
+	<title></title>
+	<style type="text/css">
+		
+		#ball{
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			position: absolute;
+			background-color: blue;
+
+		}
+	</style>
+</head>
+<body>
+
+	<div id="ball"></div>
+
+<script type="text/javascript">
+	function move() {
+		let x = Math.random()*900+"px"
+		let y = Math.random()*700+"px"
+			ball.style.left = x
+			ball.style.top = y
+	}
+
+
+	function colorchange(){
+		let r = Math.random()*255
+		let g = Math.random()*255
+		let b = Math.random()*255
+
+		ball.style.backgroundColor = "rgb("+r+","+g+","+b+")"
+	}
+	setInterval(move,1000)
+	setInterval(colorchange,100)
+</script>
+</body>
+</html>

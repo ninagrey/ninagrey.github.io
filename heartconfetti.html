@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+	
+	<style type="text/css">
+		body{
+			background-color: darkred;
+		}
+		.confetti{
+			width: 30px;
+			height: 30px;
+			background-image:url(heart.jpeg) ;
+			background-size: contain;
+			background-repeat: no-repeat;
+			position: absolute;
+			margin: 2px;
+			display: inline-block;
+
+		}
+		#card{
+			width: 400px;
+			height: 500px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+			border-color: white;
+			border-radius: 20%;
+			position: relative;
+			background-color: white;
+
+		}
+		h1{
+			font-family: "Delius Swash Caps", system-ui;
+			font-weight: 400px;
+			color: lightpink;
+		}
+
+
+	</style>
+</head>
+<body>
+	
+	<center> <div id="card"></div> </center>
+	<center><h1> HAPPY VALENTINES DAY HOUSE!</h1><center>
+
+<script type="text/javascript">
+	function makeConfetti(){
+		let sprinkle = document.createElement("div")
+		document.body.appendChild(sprinkle)
+		sprinkle.classList.add("confetti")
+		sprinkle.style.top="0px"
+		sprinkle.style.left="0px"
+
+	function fall(){
+		if(parseInt(sprinkle.style.top)>1000)
+		{
+			sprinkle.style.top ="0px"
+		}
+		else{
+		sprinkle.style.top=parseInt(sprinkle.style.top) +
+			Math.random()*100+"px"
+		sprinkle.style.left = Math.random()*2000+"px"
+	}
+
+}
+
+	setInterval(fall, 200)
+	sprinkle.style.height = Math.random()*45+"px"
+	sprinkle.style.width = Math.random()*30+"px"
+
+	}
+
+	for(let i=0; i<100; i=i+1){
+		makeConfetti(i)
+	}
+		let vday = ["url(house.jpeg)","url(house1.jpeg)","url(house2.jpeg)","url(house3.jpeg)","url(laila.jpeg)", "url(pinkhearts.jpeg)","url(cupidbaby.jpeg)","url(snoweat.jpeg)","url(snowheart.jpeg)"]
+
+	card.addEventListener("click", function(){
+		let randomNumber = Math.round(Math.random()*9)
+		console.log(randomNumber)
+		card.style.backgroundImage=vday[randomNumber]
+	})
+
+
+</script>
+
+
+</body>
+</html>
