@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style type="text/css">
+		.poster{
+			width:300px;
+			height:100px;
+			background-size:contain;
+			background-repeat: no-repeat;
+
+		}
+	</style>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+				//write here: array that has the different movie poster images 0-3
+
+
+		let posters = ["url(https://i.ytimg.com/vi/0pdqf4P9MB8/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAGhFXWYtfTD0NCewexsc1KITh03w)", "url(https://static01.nyt.com/images/2024/03/01/multimedia/01dune-explainer-01-cvzb/01dune-explainer-01-cvzb-facebookJumbo.jpg)", "url(https://lumiere-a.akamaihd.net/v1/images/pp_frozen_herobanner_20501_185ef872.jpeg?region=0,0,2048,878)", "url(https://i.ytimg.com/vi/DzfpyUB60YY/maxresdefault.jpg)"]
+
+		//write here: array that has the different reviews corresponding to the movie posters
+
+		let reviews = ["Lala land is one of my favorite movies", "dune is epic", "frozen is obviously an animated classic at this point." ]
+		
+		function makePosters (x){
+			let square = document.createElement("div")
+			document.body.appendChild(square)
+			square.classList.add("poster")
+			square.style.backgroundImage = posters[x]
+		}
+
+		for(let i=0; i<posters.length; i=i+1){
+			makePosters(i)
+		}
+	</script>
+
+</body>
+</html>
