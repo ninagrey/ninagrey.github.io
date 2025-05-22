@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+    <style type="text/css">
+        body{
+            background-color: #121212;
+        }
+
+/* SONG LIST SIDEBAR       */
+        .songlist{
+            width: 250px;
+            padding: 5px;
+            display: inline-block;
+            position: relative;
+            background-color: #1e1e1e;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+
+        .song-list h2 {
+            margin-bottom: 15px;
+            text-align: center;
+
+        }
+
+        .songitem{
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #2c2c2c;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+        }
+
+        .songitem:hover {
+            background-color: #D90166;
+        }
+
+        .record{
+            display: inline-block;
+            background-size:contain;
+            background-repeat: no-repeat;
+            border-radius: 50%;
+            margin: 5px;
+            width: 450px;
+            height: 450px;
+            background-image: url(record.png);
+            transition:20s;
+        }
+
+        #record1{
+            background-image: url(record.png);
+            transition:20s;
+            background-repeat: no-repeat;
+
+        }
+        #record2{
+            background-image: url(record.png);
+            transition:20s;
+            top: 500px;
+        }
+
+        h1 {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 1000;
+            font-size: 100px;
+            font-style: normal;
+            color: #D90166;
+        }
+
+        h2 {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 1000;
+            font-size: 50px;
+            font-style: normal;
+            color: lightgray;
+        }
+
+        h3 {
+            font-family: "Bebas Neue", sans-serif;
+            font-weight: 1000;
+            font-size: 10px;
+            font-style: normal;
+            color: white;
+        }
+
+ 
+        
+    </style>
+
+</head>
+<body>
+<center><h1>DJ WITH NINA</h1></center>
+<audio src="ninsong.m4a" id="ninasong"></audio>
+<!-- SONG LIST -->
+<div class="songlist">
+    <h2> SONG LIST </h2>
+    <div id="songitem1" class="songitem"> Nina Song - Molly </div>
+    <div class="songitem"> Nina Song - Molly </div>
+    <div class="songitem"> Nina Song - Molly </div>
+    <div class="songitem"> Nina Song - Molly </div>
+    <div class="songitem"> Nina Song - Molly </div>
+    <div class="songitem"> Nina Song - Molly </div> 
+    <div class="songitem"> Nina Song - Molly </div>
+    <div class="songitem"> Nina Song - Molly </div>
+
+
+<div class="loads">
+    <button class="load" id="loadleft"> Load Left </button>
+    <button class="load" id="loadright"> Load Right </button>
+</div>
+</div>
+<!-- turntables -->
+<!-- <div class="records"> -->
+    <!-- left -->
+    <!-- <div class="deck" id="leftdeck">
+        <h3 class="decktitle">Deck 1</h3>
+        <div id="record1" class="record" ></div> -->
+         <!-- track info -->
+         <!-- <div class="trackinfo">
+             <div class="tracktitle" id="tracktitle1"> <h3>No Track Loaded</h3></div>
+         </div> -->
+         <!-- buttons -->
+         <<!-- div class="volumecontrols">
+                        <label for="volume1">Volume</label>
+                        <input type="range" id="volume1" class="volumeslider" min="0" max="100" value="80">
+                    </div>
+                </div>
+         </div>
+    </div>
+</div> -->
+
+<div id="record1" class="record"></div>
+<div id="record2" class="record"></div>
+
+
+
+<script type="text/javascript">
+
+    let counter=0
+
+songitem1.addEventListener("click", function(){
+counter=counter+1
+
+if(counter%2==0){
+
+    record1.style.transform = ""
+        ninasong.pause()
+}
+
+else if (counter%2==1){
+    record1.style.transform = "rotate(10000deg)"
+        ninasong.play()
+}
+
+
+
+})
+
+
+    let songs = []
+
+   
+
+
+</script>
+
+
+</body>
+</html>

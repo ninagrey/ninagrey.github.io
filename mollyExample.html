@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+	<style type="text/css">
+		body{
+			background-color: #222222;
+		}
+		.song{
+			width: 100px;
+			height: 50px;
+			background-color: red;
+			margin: 5px;
+		}
+
+		.record{
+			display: inline-block;
+			background-size:contain;
+			background-repeat: no-repeat;
+			margin: 5px;
+			width: 600px;
+			height: 600px;
+			background-image: url(record.png);
+			transition:20s;
+		}
+
+		#pause{
+			width: 50px;
+			height: 25px;
+			background-color: black;
+
+		}
+
+		h1 {
+  			font-family: "Bebas Neue", sans-serif;
+ 			font-weight: 1000;
+ 			font-size: 100px;
+			font-style: normal;
+			color: #D90166;
+}
+
+		}
+
+		}
+		/*#record1{
+			width: 500px;
+			height: 500px;
+			background-image: url(record.png);
+			transition:20s;
+			background-repeat: no-repeat;
+
+		}
+		#record2{
+			
+			background-image: url(record.png);
+			transition:20s;
+			top: 500px;
+		}*/
+	</style>
+
+</head>
+<body>
+<h1>DJ WITH NINA</h1>
+	<audio src="ninsong.m4a" id="ninasong"></audio>
+	<audio src="ninsong.m4a" id="mollysong"></audio>
+
+
+
+<!-- <div id="song5" class=song ></div> -->
+
+<div id="record1" class="record" ></div>
+
+<div id="play1" class=song ></div>
+<div id="pause" class=song ></div>
+
+<div id="record2" class="record" ></div>
+
+<div id="play2" class=song ></div>
+<div id="pause2" class=song ></div>
+
+<div id="pause" class="buttons"></div>
+
+
+
+<script type="text/javascript">
+
+	play1.addEventListener("click",function(){
+		record1.style.transform = "rotate(10000deg)"
+		ninasong.play()
+
+	})
+
+	pause2.addEventListener("click",function(){
+		record1.style.transform = "rotate(0deg)"
+		ninasong.pause()
+	})
+	
+	play3.addEventListener("click",function(){
+		record2.style.transform = "rotate(10000deg)"
+	})
+
+	pause4.addEventListener("click",function(){
+		record2.style.transform = "rotate(0deg)"
+	})
+
+	song5.addEventListener("click",function(){
+		record1.style.transform = "rotate(10000deg)"
+	})
+
+
+	pause.addEventListener("click",function(){
+
+	})
+
+
+</script>
+
+
+</body>
+</html>
