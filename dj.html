@@ -97,43 +97,33 @@
 <body>
 <center><h1>DJ WITH NINA</h1></center>
 <audio src="ninsong.m4a" id="ninasong"></audio>
+<audio src="rihanna.mp3" id="rihannasong"></audio>
+<audio src="g6.mp3" id="g6"></audio>
+<audio src="vondutch.mp3" id="vondutch"></audio>
+<audio src="paperplanes.mp3" id="paperplanes"></audio>
+<audio src="savingup.mp3" id="savingup"></audio>
+<audio src="nana.mp3" id="nana"></audio>
+<audio src="feelsoclose.mp3" id="soclose"></audio>
+<audio src="hello.mp3" id="hello"></audio>
 <!-- SONG LIST -->
 <div class="songlist">
     <h2> SONG LIST </h2>
-    <div id="songitem1" class="songitem"> Nina Song - Molly </div>
-    <div class="songitem"> Nina Song - Molly </div>
-    <div class="songitem"> Nina Song - Molly </div>
-    <div class="songitem"> Nina Song - Molly </div>
-    <div class="songitem"> Nina Song - Molly </div>
-    <div class="songitem"> Nina Song - Molly </div> 
-    <div class="songitem"> Nina Song - Molly </div>
-    <div class="songitem"> Nina Song - Molly </div>
+    <div id="songitem1" class="songitem"> Hello - Martin Solveig, Dragonette </div>
+    <div id="songitem2" class="songitem"> Dont Stop the Music - Rihanna </div>
+    <div id="songitem3" class="songitem"> Like a G6 - Far East Movement </div>
+    <div id="songitem4" class="songitem"> Von Dutch - Charli XCX </div>
+    <div id="songitem5" class="songitem"> Paper Planes - MIA </div>
+    <div id="songitem6" class="songitem"> Saving Up - Dom Dolla </div> 
+    <div id="songitem7" class="songitem"> (It Goes Like) Nanana - Peggy Gou </div>
+    <div id="songitem8" class="songitem"> Feel So Close - Calvin Harris </div>
 
 
-<div class="loads">
+<!-- <div class="loads">
     <button class="load" id="loadleft"> Load Left </button>
-    <button class="load" id="loadright"> Load Right </button>
+    <button class="load" id="loadright"> Load Right </button> -->
 </div>
 </div>
-<!-- turntables -->
-<!-- <div class="records"> -->
-    <!-- left -->
-    <!-- <div class="deck" id="leftdeck">
-        <h3 class="decktitle">Deck 1</h3>
-        <div id="record1" class="record" ></div> -->
-         <!-- track info -->
-         <!-- <div class="trackinfo">
-             <div class="tracktitle" id="tracktitle1"> <h3>No Track Loaded</h3></div>
-         </div> -->
-         <!-- buttons -->
-         <<!-- div class="volumecontrols">
-                        <label for="volume1">Volume</label>
-                        <input type="range" id="volume1" class="volumeslider" min="0" max="100" value="80">
-                    </div>
-                </div>
-         </div>
-    </div>
-</div> -->
+
 
 <div id="record1" class="record"></div>
 <div id="record2" class="record"></div>
@@ -150,20 +140,126 @@ counter=counter+1
 if(counter%2==0){
 
     record1.style.transform = ""
-        ninasong.pause()
+        hello.pause()
 }
 
 else if (counter%2==1){
     record1.style.transform = "rotate(10000deg)"
-        ninasong.play()
+        hello.play()
+}
+})
+
+songitem2.addEventListener("click", function(){
+counter=counter+1
+
+if(counter%2==0){
+
+    record2.style.transform = ""
+        rihannasong.pause()
 }
 
-
+else if (counter%2==1){
+    record2.style.transform = "rotate(10000deg)"
+        rihannasong.play()
+}
 
 })
 
+songitem3.addEventListener("click", function(){
+counter=counter+1
 
-    let songs = []
+if(counter%2==0){
+
+    record1.style.transform = ""
+        g6.pause()
+}
+
+else if (counter%2==1){
+    record1.style.transform = "rotate(10000deg)"
+        g6.play()
+}
+
+})
+
+songitem4.addEventListener("click", function(){
+counter=counter+1
+
+if(counter%2==0){
+
+    record2.style.transform = ""
+        vondutch.pause()
+}
+
+else if (counter%2==1){
+    record2.style.transform = "rotate(10000deg)"
+        vondutch.play()
+}
+
+})
+
+songitem5.addEventListener("click", function(){
+counter=counter+1
+
+if(counter%2==0){
+
+    record1.style.transform = ""
+        paperplanes.pause()
+}
+
+else if (counter%2==1){
+    record1.style.transform = "rotate(10000deg)"
+        paperplanes.play()
+}
+
+})
+
+songitem6.addEventListener("click", function(){
+counter=counter+1
+
+if(counter%2==0){
+
+    record2.style.transform = ""
+        savingup.pause()
+}
+
+else if (counter%2==1){
+    record2.style.transform = "rotate(10000deg)"
+        savingup.play()
+}
+
+})
+
+songitem7.addEventListener("click", function(){
+counter=counter+1
+
+if(counter%2==0){
+
+    record1.style.transform = ""
+        nana.pause()
+}
+
+else if (counter%2==1){
+    record1.style.transform = "rotate(10000deg)"
+        nana.play()
+}
+
+})
+
+songitem8.addEventListener("click", function(){
+counter=counter+1
+
+if(counter%2==0){
+
+    record2.style.transform = ""
+        soclose.pause()
+}
+
+else if (counter%2==1){
+    record2.style.transform = "rotate(10000deg)"
+        soclose.play()
+}
+
+})
 
    
 
